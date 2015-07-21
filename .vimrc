@@ -83,3 +83,4 @@ set number
 set shiftwidth=2
 autocmd VimEnter * execute 'NERDTree'
 let python_version_2 = 1
+colorscheme elflord
