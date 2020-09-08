@@ -1,0 +1,44 @@
+if 0 | endif
+
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+set runtimepath^=~/.vim/bundle/neobundle.vim/
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
+NeoBundle 'posva/vim-vue'
+NeoBundle 'leafgarland/typescript-vim'
+
+call neobundle#end()
+
+filetype plugin indent on
+
+NeoBundleCheck
+
+syntax on
+colorscheme ron
+set number
+set laststatus=2
+set clipboard=unnamed,autoselect
+set hlsearch
+autocmd vimenter * NERDTree
+imap ^H <Left><Del>
+set encoding=utf-8
+set fileencodings=utf-8,cp932
+
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set expandtab
+set autoindent
+set smartindent
+set nobackup
+set noswapfile
